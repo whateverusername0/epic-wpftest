@@ -1,0 +1,154 @@
+﻿<Window x:Class="wpfhomotest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpfhomotest"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="White" Offset=".1"/>
+                <GradientStop Color="DarkCyan" Offset=".5"/>
+                <GradientStop Color="Red" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Content="ТЕСТ НА ПАЦАНА" FontSize="20"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"/>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Border BorderBrush="Black" BorderThickness="1"
+                    Grid.Row="0" Grid.Column="0">
+                <Grid Margin="4">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock TextWrapping="WrapWithOverflow" Grid.ColumnSpan="2">
+                        Question 1: Vanechkin, DO YOU SPEAK ENGLISH???
+                    </TextBlock>
+
+                    <RadioButton Grid.Row="1" GroupName="Q_1"  Content="Да"/>
+                    <RadioButton Grid.Row="1" Grid.Column="1" GroupName="Q_1" Content="Нет"/>
+                    <RadioButton Grid.Row="2" GroupName="Q_1" Content="Наверное"/>
+                    <RadioButton Grid.Row="2" Grid.Column="1" GroupName="Q_1" Content="Не знаю"/>
+                </Grid>
+            </Border>
+
+            <Border BorderBrush="Black" BorderThickness="1"
+                    Grid.Row="0" Grid.Column="1">
+                <Grid Margin="4">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock TextWrapping="WrapWithOverflow" Grid.ColumnSpan="2">
+                        Question 2: Кто победил на выборах в 2024 году?
+                    </TextBlock>
+
+                    <RadioButton Grid.Row="1" GroupName="Q_2"  Content="Джо"/>
+                    <RadioButton Grid.Row="1" Grid.Column="1" GroupName="Q_2" Content="Камалла"/>
+                    <RadioButton Grid.Row="2" GroupName="Q_2" Content="Трамп"/>
+                    <RadioButton Grid.Row="2" Grid.Column="1" GroupName="Q_2" Content="Путин"/>
+                </Grid>
+            </Border>
+
+            <Border BorderBrush="Black" BorderThickness="1"
+                    Grid.Row="0" Grid.Column="2">
+                <Grid Margin="4">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock TextWrapping="WrapWithOverflow" Grid.ColumnSpan="2">
+                        Question 3: Любишь тратить деньги на всякое барахло?
+                    </TextBlock>
+
+                    <RadioButton Grid.Row="1" GroupName="Q_3"  Content="Да"/>
+                    <RadioButton Grid.Row="1" Grid.Column="1" GroupName="Q_3" Content="Нет"/>
+                    <RadioButton Grid.Row="2" GroupName="Q_3" Content="Наверное"/>
+                    <RadioButton Grid.Row="2" Grid.Column="1" GroupName="Q_3" Content="Не знаю"/>
+                </Grid>
+            </Border>
+
+            <Border BorderBrush="Black" BorderThickness="1"
+                    Grid.Row="0" Grid.Column="3">
+                <Grid Margin="4">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock TextWrapping="WrapWithOverflow" Grid.ColumnSpan="2">
+                        Question 4: Готовы ли вы переехать в Израиль?
+                    </TextBlock>
+
+                    <RadioButton Grid.Row="1" GroupName="Q_4"  Content="Да"/>
+                    <RadioButton Grid.Row="1" Grid.Column="1" GroupName="Q_4" Content="Нет"/>
+                    <RadioButton Grid.Row="2" GroupName="Q_4" Content="Наверное"/>
+                    <RadioButton Grid.Row="2" Grid.Column="1" GroupName="Q_4" Content="Не знаю"/>
+                </Grid>
+            </Border>
+
+            <Label Grid.ColumnSpan="4" Grid.Row="1"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="32">
+                НА ОСТАЛЬНЫЕ ВОПРОСЫ НЕ ХВАТИЛО БЮДЖЕТА
+            </Label>
+
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Button HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="20" Padding="4"
+                    Content="Сдать работу"
+                    Click="Button_Click"/>
+        </Grid>
+        
+    </Grid>
+</Window>
